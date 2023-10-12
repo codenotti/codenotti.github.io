@@ -193,7 +193,7 @@ margin: 20px;}
 { margin: 2px 0 22px 0px;}
 
 #site_content ul li
-{ list-style-type: none;
+{ list-style-type: circle;
   background: url(bullet.png) no-repeat;
   margin: 0 0  6px 0px; 
   padding: 0 0 4px 25px;
@@ -236,16 +236,16 @@ margin: 20px;}
   padding: 24px 0 5px 0;
   text-align: center; 
   background: transparent;
-  color: #7cbdce;
+  color: #32aaad;
   text-transform: uppercase;
   letter-spacing: 0.1em;}
 
 #footer a
-{ color: #7cbdce;
+{ color: #32aaad;
   text-decoration: none;}
 
 #footer a:hover
-{ color: #7cbdce;
+{ color: #32aaad;
   text-decoration: underline;}
 
 .search
@@ -384,7 +384,7 @@ table
 table tr th, table tr td
 { background: #3B3B3B;
   color: #FFF;
-  padding: 7px 4px;
+  padding: 15px 15px;
   text-align: left;}
   
 table tr td

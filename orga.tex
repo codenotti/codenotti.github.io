@@ -1,0 +1,271 @@
+\documentclass[11pt]{amsart}%
+
+\usepackage{a4wide}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{acronym}
+\usepackage{amssymb}
+\usepackage{graphicx}%
+\setcounter{MaxMatrixCols}{30}
+\usepackage{tabularx,bbm}
+\usepackage{a4}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsthm}
+\usepackage{amsthm,url}
+\usepackage{paralist}
+\usepackage{enumerate}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{stmaryrd}
+\usepackage{color}
+\usepackage{hyperref}
+
+
+\def\0{\mathbf{0}}
+\def\va{\mathbf{a}}
+\def\e{\mathbf{e}}
+\def\vf{\mathbf{f}}
+\def\m{\mathbf{m}}
+\def\s{\mathbf{s}}
+\def\vu{\mathbf{u}}
+\def\v{\mathbf{v}}
+\def\vv{\mathbf{v}}
+\def\bx{\mathbf{x}}
+\def\vx{\mathbf{x}}
+\def\z{\mathbf{z}}
+\def\A{\mathbf{A}}
+\def\K{\mathcal{K}}
+\def\hs{h^*}
+\def\hstar{h^*}
+\def\lattice{\Lambda}
+\def\suchthat{: \, }
+
+\renewcommand\emptyset{\varnothing}
+\newcommand\ds{\displaystyle}
+
+\newcommand\fl[1]{\left\lfloor {#1} \right\rfloor} 
+\newcommand\fr[1]{\left\{ {#1} \right\}} 
+\newcommand\commentout[1]{}
+\newcommand\Def[1]{{\bf #1}}
+\newcommand\set[2]{{#1} : \, {#2}}
+
+\newcommand{\todo}[1]{\textcolor{red}{\textbf{TODO:} #1}}
+
+\renewcommand\vec{\overrightarrow}
+\newcommand\intr{\operatorname{int}} 
+\newcommand\rk{\operatorname{rank}} 
+\newcommand\Asc{\operatorname{Asc}}
+\newcommand\des{\operatorname{des}} 
+\newcommand\Des{\operatorname{Des}} 
+\newcommand\maj{\operatorname{maj}} 
+\newcommand\lcm{\operatorname{lcm}} 
+\newcommand\vol{\operatorname{vol}} 
+\newcommand\conv{\operatorname{conv}} 
+\newcommand\vspan{\operatorname{span}} 
+\newcommand\verts{\operatorname{vert}} 
+\newcommand\vertices{\operatorname{vert}} 
+\newcommand\const{\operatorname{const}} 
+\newcommand\cone{\operatorname{cone}} 
+\newcommand\link{\operatorname{link}} 
+\newcommand\height{\operatorname{height}} 
+\newcommand\ehr{\operatorname{ehr}} 
+\newcommand\Ehr{\operatorname{Ehr}} 
+\newcommand\SL{\operatorname{SL}} 
+\newcommand\GL{\operatorname{GL}} 
+
+\newcommand\Z{\mathbb{Z}}
+\newcommand\Q{\mathbb{Q}}
+\newcommand\R{\mathbb{R}}
+\newcommand\C{\mathbb{C}}
+\newcommand\N{\mathbb{N}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+
+\pagestyle{empty}
+\thispagestyle{empty}
+
+\begin{document}
+
+% \includegraphics[width=2in]{homework/HUJI_LogoEng_hor}
+% \makebox[2in][l]{\Large HUJI logo ?}
+
+\includegraphics[width=2in]{fu}
+
+% \vspace{-.08in}
+\small
+{\sc Discrete Geometry I} \\ Wintersemester 2023/24
+\normalsize
+
+\vspace{-.9in}
+\hspace{4.55in}
+\begin{tabular}{r}
+% \small Florian Frick\\
+\small Prof. Giulia Codenotti\\
+\small Sophie Rehberg\\
+% \small Institut f\"ur Mathematik\\
+% \small AG Diskrete Geometrie\\ 
+% \small Arnimallee 2\\
+% \small Freie Universit\"at Berlin\\
+% \small {\tt beck@fu-berlin.de}
+\end{tabular}
+
+\def\uebung{1}
+
+\newcounter{exerc}
+\setcounter{exerc}{1}
+
+\def\nextex{
+\medskip
+\noindent
+\textbf{Exercise \uebung.\theexerc\ (5 points)}\\
+\addtocounter{exerc}{1}
+}
+
+\def\nextexc{
+\medskip
+\noindent
+\textbf{Exercise \uebung.\theexerc} (cooperative)\\
+\addtocounter{exerc}{1}
+}
+
+\def\nextexi{
+\medskip
+\noindent
+\textbf{Exercise \uebung.\theexerc} (individual)\\
+\addtocounter{exerc}{1}
+}
+
+\begin{center}
+\textbf{Organizational Information}\\
+\end{center}
+
+% \bigskip
+\vspace{2\baselineskip}
+\noindent
+\textbf{Lectures}
+\begin{itemize}
+ \item Tuesdays 10-12 in T9/SR 006
+ \item Wednesdays 10-12 in KöLu24-26/SR 006 
+%  \item answer the corresponding quiz by Monday 11am 
+%  \item join in person (rooms A3.024 @FUB, Ross70A @HUJI) % or online (link)
+%  \item you will present and discuss two exercise solutions (see below)
+% \item we will discuss typical exam questions 
+%  \item we will discuss your questions regarding the videos, and
+%    hint towards further topics in the field beyond the scope of this
+%    course
+\end{itemize}
+
+\medskip
+\noindent
+\textbf{Exercise sessions}
+\begin{itemize}
+%  \item we meet online (see moodle for detailed meeting information or use this link: \url{https://huji.zoom.us/j/86357848003?pwd=d3N6WnoyMlJ6d3ROMVdwYTNjVFdvZz09}) on Wednesdays (08:30-10:00 Berlin
+%    time, 09:30-11:00 Jerusalem time)
+ \item Fridays, 10:15-11:45 in A6/SR 032
+%  \item you have access to a physical room (A6.032 @FUB, ??? @HUJI)
+ \item you present and discuss your solutions from previous exercise sheets
+ \item you might discuss ideas on how to solve the upcoming exercise sheet
+ \item you can ask questions about the lectures and exercises
+ \item you might discuss further exercises
+ \item {\footnotesize Sophie is there to answer your questions and help you}
+\end{itemize}
+
+
+\textbf{Final exams}
+\begin{itemize}
+	\item at the end of the course there will be a written exam
+	\item first exam at 10:00 AM on February 20th
+	% 2nd semester @ HUJI starts March 12
+	\item second exam to be announced 
+	% \item 
+\end{itemize}
+
+\textbf{Formal requirements}
+
+To successfully complete the course you must do all the following:
+\begin{itemize}
+	\item pass the final exam
+	 \item obtain active participation credit: that is, achieve at least 50 \% of the points on the homework sheets
+	%   \begin{itemize}
+	%    \item sign up for homework presentation  at least , 7 minutes! (regular attendence)
+	%    \item and your group should have received at least 60\% of the available points of the graded exercises
+	%   \end{itemize}
+	\item obtain regular participation credit: that is, sign up  to present a homework problem during the exercise session at least every second week
+\end{itemize}
+
+\medskip
+\noindent
+\textbf{Homework}
+\begin{itemize}
+ \item due every week on Wednesdays 9:00 am
+ \item submission in pairs
+ \item every sheet contains 3 or 4 exercises, you submit written
+   solutions to all the exercises 
+%  \item during the lecture on Tuesdays, solutions of 
+%    exercises are presented by students (sign-up via moodle)
+   % fail once -- warning; fail twice -- fail.
+ \item two exercises of your choice will be graded, sometimes exercises are marked as default graded.
+%  \item each exercise gets either a ``reasonably well processed''-check or not
+
+
+ \item homework submission will be through the Whiteboard, 
+    your  homework submission file needs to fulfill all the following properties:
+ \begin{enumerate}
+  \item a readable pdf file not larger than 1MB,
+  \item handwritten (readable) or properly typed in LaTeX,
+  \item exercises in the correct ordering,
+  \item name your file according to the following pattern:\\
+   \url{hw##-lastname1_name1-lastname2_name2.pdf}
+  \\(names of the group member ordered alphabetically with respect to
+  the lastname), e.g., 
+  \url{hw04-hirschhuegel_maria-rehberg_sophie.pdf}
+ \end{enumerate}
+ If your file does not comply with the above requirements it will not be graded!
+ \item  
+  We encourage you to work together within your homework group and across different groups, you are welcome to exchange ideas, discuss strategies, and solution drafts.
+  Then write down the solution/proof in your own words and work out some missing details on your own. 
+  
+  If you copy entire solutions or proofs you will not get any points for the whole sheet and risk not passing the active participation at all.
+  
+%   You should NOT copy whole proofs or solutions (we will notice). 
+\end{itemize}
+
+\medskip
+\noindent
+\textbf{Communication}
+\begin{itemize}
+ \item material, announcements, homework etc. will be posted on the Whiteboard
+%  \item please use the forum to ask (and answer?) questions (?)
+ \item you can write mails: \url{s.rehberg@fu-berlin.de}
+ \item there will be  a drop-by hour with Sophie, probably on Mondays 11:30 until 12:30 in Arnimallee 6, where the coffee machine is (to be confirmed).
+ \item Prof. Codenotti has a weekly office hour on Wednesdays, 15.30-16:30.
+%  \item 
+ \item we encourage you to create your own communication channel to
+   connect with your colleagues (Discord? Zulip?)
+\end{itemize}
+
+\medskip
+\noindent
+
+
+
+\medskip
+\noindent
+\textbf{Do you feel lost? Unorganized? Demotivated? Lonely?}
+ Talk to us ! Otherwise, here are some more people you can talk to:
+\begin{itemize}
+ \item Student Advisory Service (Department of Mathematics and Computer Science
+Logo Studienberatung), from students for students: \url{https://www.mi.fu-berlin.de/en/stud/beratungszentrum/studienberatung/index.html}
+ \item Advising: Everything about your Studies at a Glance: \url{https://www.fu-berlin.de/en/studium/beratung/index.html}
+ \item asta fu, students self-administration organization: \url{https://astafu.de/en}
+ \item Center for Academic Advising and Psychological Counseling: \url{https://www.fu-berlin.de/en/sites/studienberatung/index.html}
+
+%   \item \todo{}
+%  \item
+\end{itemize}
+
+
+\end{document}
+
